@@ -73,7 +73,7 @@ pipeline
         post {
             	always {
             		emailext to: "s223446723@deakin.edu.au",
-            		subject: "Deploy to Production stage",
+            		subject: "Deploy to Production stage ",
             		body: "Code is being deployed to Production Environment",
             		attachLog: true
             	}
