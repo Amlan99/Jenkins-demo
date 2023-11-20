@@ -10,15 +10,6 @@ pipeline
             {
                 echo "Build stage : Build Create table scripts on DEV environment"
             }
-            
-        	post {
-            	always {
-            		emailext to: "s223446723@deakin.edu.au",
-            		subject: "Build stage",
-            		body: "Build Create table scripts on DEV environment",
-            		attachLog: true
-            	}
-            }
         }
         
         stage('Unit and Integration Tests') 
@@ -26,15 +17,6 @@ pipeline
             steps 
             {
                 echo "Unit and Integration Tests stage : Perform tests on DEV environment"
-            }
-            
-            post {
-            	always {
-            		emailext to: "s223446723@deakin.edu.au",
-            		subject: "Unit and Integration Tests stage",
-            		body: "Perform tests on DEV environment",
-            		attachLog: true
-            	}
             }
         }
         
@@ -52,15 +34,6 @@ pipeline
             {
                 echo "Integration Tests on Staging : Perform Integration Tests on Staging database"
             }
-            
-            post {
-            	always {
-            		emailext to: "s223446723@deakin.edu.au",
-            		subject: "Integration Tests on Staging",
-            		body: "Perform Integration Tests on Staging AWS EC2 using Selenium",
-            		attachLog: true
-            	}
-            }
         }
                 
         stage('Deploy to Production') 
@@ -68,15 +41,6 @@ pipeline
             steps 
             {
                 echo "Deploy to Production stage : Code is being deployed to Production Environment"
-            }
-            
-        	post {
-            	always {
-            		emailext to: "s223446723@deakin.edu.au",
-            		subject: "Deploy to Production stage",
-            		body: "Code is being deployed to Production Environment",
-            		attachLog: true
-            	}
             }
             
         }
