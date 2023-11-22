@@ -40,7 +40,7 @@ pipeline
         {
             steps 
             {
-                echo "Deploy to Production stage : Code is being deployed to Production Environment"
+                echo "Deploy to Production stage : Code is being deployed to Production Environments."
             }
             
         }
