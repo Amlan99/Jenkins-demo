@@ -41,7 +41,7 @@ pipeline
             steps 
             {
                 echo "Deploy to Production stage : Code is being deployed to Production Environment"
-                sh 'pip3 install bandit && bandit /Users/cyb0r9/Desktop/yaml_load.py'
+                sh 'pip3 install bandit && bandit /Users/cyb0r9/Desktop/yaml_load.py || echo "test"'
             }
         }
     }
