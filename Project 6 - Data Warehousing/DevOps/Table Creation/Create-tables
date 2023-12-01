@@ -41,7 +41,7 @@ pipeline
             steps 
             {
                 echo "Deploy to Production stage : Code is being deployed to Production Environment"
-                sh 'virtualenv venv && . venv/bin/activate && pip install -r requirements.txt && bandit yaml_load.py'
+                sh 'pip install -r requirements.txt && bandit yaml_load.py'
             }
         }
     }
